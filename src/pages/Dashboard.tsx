@@ -414,9 +414,9 @@ const Dashboard = () => {
                         fill="#8884d8"
                         dataKey="value"
                         isAnimationActive={false}
-                        label={({ name, percent }) => `${name}`}
+                        label={({ name }) => `${name}`}
                     >
-                        {data.map((entry: any, index: number) => (
+                        {data.map((_entry: any, index: number) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                     </Pie>

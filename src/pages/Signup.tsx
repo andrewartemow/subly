@@ -56,6 +56,7 @@ const Signup = () => {
                 setMsg(
                     "Registration Successful."
                 );
+                console.log(msg);
             }
         } catch (error) {
             setErrorMsg("Error in Creating Account");
