@@ -49,7 +49,7 @@ const LogIn = () => {
             <h2 className="text-5xl font-bold text-secondary leading-[100%] mb-4">
                 Log<TextCard backgroundColor="info">in🔑</TextCard></h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4 mb-4">
-                <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="username" className="input text-secondary bg-neutral-100 font-bold" required />
+                <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="email" className="input text-secondary bg-neutral-100 font-bold" required />
                 <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder="password" className="input text-secondary bg-neutral-100 font-bold" required />
                 <CustomButton type="submit">Login</CustomButton>
             </form>
