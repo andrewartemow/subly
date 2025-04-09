@@ -1,13 +1,6 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
-
-import image from '/images/SubLy.png';
-
-import CustomButton from "../components/CustomButton"
 import Description from "../components/Description"
 import TextCard from "../components/TextCard"
-
-import { IoIosCheckmarkCircle } from "react-icons/io";
 
 import { fadeIn } from "../variants"
 

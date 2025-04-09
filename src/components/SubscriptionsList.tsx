@@ -1,4 +1,4 @@
-import { Ref, FC, useState } from 'react';
+import { FC } from 'react';
 
 import Block from './Block';
 import CustomButton from './CustomButton';

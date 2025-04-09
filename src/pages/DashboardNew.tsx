@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { supabase } from "../supabaseClient";
@@ -21,13 +21,14 @@ import SubscriptionDetail from "../components/SubscriptionDetail";
 // import SideBar from "../components/SideBar";
 import Modal from "../components/Modal";
 import SubscriptionsContextMenu from "../components/SubscriptionsContextMenu";
+import FilesContextMenu from "../components/FilesContextMenu";
+import SubscriptionsList from "../components/SubscriptionsList";
 
 import customSubscriptionIcon from '/icons/features.png'
 
 import { fadeInFromSide } from "../variants";
 import { SubscriptionInterface, ListedSubscriptionInterface } from "../interfaces";
-import FilesContextMenu from "../components/FilesContextMenu";
-import SubscriptionsList from "../components/SubscriptionsList";
+
 
 const initialSubscriptionsContextMenu = {
     data: { websiteLink: "" },
@@ -144,7 +145,7 @@ const Dashboard = () => {
         const checkForOAuthResults = async () => {
             const params = new URLSearchParams(location.search);
             const success = params.get('success');
-            const error = params.get('error');
+            // const error = params.get('error');
 
             if (success) {
                 try {
