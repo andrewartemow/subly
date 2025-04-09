@@ -53,7 +53,7 @@ const LogIn = () => {
                 <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder="password" className="input text-secondary bg-neutral-100 font-bold" required />
                 <CustomButton type="submit">Login</CustomButton>
             </form>
-            <p className="text-secondary p-2 border-2 border-neutral-200 bg-neutral-100 rounded-lg">test: andrei@gmail.com, 12345678</p>
+            {/* <p className="text-secondary p-2 border-2 border-neutral-200 bg-neutral-100 rounded-lg">test: andrewartemow@gmail.com, 12345678</p> */}
         </div>
     )
 }

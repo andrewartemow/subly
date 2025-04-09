@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
 
-import Block from '../components/Block';
 import CustomButton from '../components/CustomButton';
 import Description from '../components/Description';
 import TextCard from '../components/TextCard';
@@ -10,14 +9,14 @@ import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../variants';
 
-import video from '/example_video.mp4';
+import video from '/example_video.webm';
 
 import image from '/images/SubLy.png';
-import screenshot_1 from '/images/chrome_7z7VL0O6VO.png';
-import screenshot_2 from '/images/chrome_GwsYeswxwZ.png';
-import screenshot_3 from '/images/chrome_Ra5pVaIm7W.png';
-import screenshot_4 from '/images/chrome_Yl9ZtA159z.png';
-import avatar_1 from '/avatars/1619192462048.jpg';
+// import screenshot_1 from '/images/chrome_7z7VL0O6VO.png';
+// import screenshot_2 from '/images/chrome_GwsYeswxwZ.png';
+// import screenshot_3 from '/images/chrome_Ra5pVaIm7W.png';
+// import screenshot_4 from '/images/chrome_Yl9ZtA159z.png';
+import avatar_1 from '/avatars/avatar.jpg';
 import avatar_2 from '/avatars/1682786485128.jpg';
 import avatar_3 from '/avatars/1729926383582.jpg';
 
@@ -38,8 +37,8 @@ const Home = () => {
                 >
                     <div className="text-center">
                         <div className="max-w-4xl">
-                            <div className="badge text-primary">
-                                start saving your money
+                            <div className="badge text-primary bg-neutral-50 border-[1px] border-neutral-300 text-lg">
+                                struggling to track your subscriptions?
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold text-secondary leading-[100%]">
                                 The smarter way to
@@ -49,7 +48,7 @@ const Home = () => {
                                 </TextCard>
                             </h1>
                             <Description size="big">
-                                Say goodbye to scattered subscription management and unreliable tools — Use SubLy to effortlessly track and manage all your subscriptions on a simple and intuitive timeline.
+                                Stay on top of all your recurring expenses—personal, business, or anything in between.
                             </Description>
                             <NavLink to="/signup"><CustomButton size="big">Get started for free</CustomButton></NavLink>
                         </div>
@@ -82,7 +81,7 @@ const Home = () => {
 
                 >
 
-                    <div className="p-10 border-warning bg-orange-50 border-2 rounded-lg w-fit transform hover:scale-105 duration-75 flex flex-col items-center max-w-4xl mx-auto">
+                    <div className="p-10 border-warning bg-orange-50 border-2 rounded-lg w-full transform hover:scale-105 duration-75 flex flex-col items-center max-w-4xl mx-auto">
                         <h2 className="text-5xl text-secondary font-extrabold mb-5 text-center">Trusted by many users <br />around the globe🌎</h2>
                         <div className="avatar-group -space-x-6 justify-center mb-4">
                             <div className="avatar">
@@ -123,19 +122,41 @@ const Home = () => {
                     variants={fadeIn}
                 >
                     <img src={image} className="mb-10 max-w-[20vw] min-w-[200px] w-full" alt="" />
-                    <div className="max-w-2xl mb-8">
-                        <h2 className="text-5xl font-bold text-secondary text-center">
-                            Optimized for <TextCard backgroundColor="error" rotate="2">
-                                ⚡️speed
-                            </TextCard>
-                            <br />
-                            and ease of use
+                    <div className="max-w-4xl mb-10">
+                        <h2 className="text-5xl font-bold text-secondary text-center mb-10">
+                            Why It Will Save You <br /><TextCard backgroundColor="success" rotate="-2">
+                                💸money
+                            </TextCard> and <TextCard backgroundColor="warning" rotate="2">⌛time</TextCard>?
                         </h2>
-                        <Description>
-                            We designed SubLy for those who value simplicity, efficiency, and seamless organization. Our goal is to provide an intuitive yet powerful solution for managing and tracking all your subscriptions with ease.
-                        </Description>
+                        {/* <Description> */}
+                        <div className="flex flex-col w-full items-center lg:flex-row lg:items-start">
+                            <div className="card bg-base-200 rounded-box grid place-items-center py-5 px-4">
+                                <h3 className="mb-4 text-xl font-extrabold w-full text-left">With Subly</h3>
+                                <ul className="flex flex-col gap-y-5 w-full">
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ No more surprise charges</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ See upcoming bills at a glance</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ Stop losing money on forgotten trials</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ Track monthly & yearly costs</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ Store and manage invoices</span></li>
+                                </ul>
+                            </div>
+                            <div className="divider divider-vertical lg:divider-horizontal">OR</div>
+                            <div className="card bg-base-200 rounded-box grid place-items-center py-5 px-4">
+                                <h3 className="mb-4 text-xl font-extrabold w-full text-left">Without Subly</h3>
+                                <ul className="flex flex-col w-full gap-y-5">
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Forgetting about upcoming payments</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Manually tracking costs in spreadsheets</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Getting charged after free trials end</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Overspending without realizing it</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Confusing payment dates</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Missing saving opportunities</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ No clear cost overview</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        {/* </Description> */}
                     </div>
-                    <div className="w-full mx-auto flex justify-center items-center flex-wrap gap-10">
+                    {/* <div className="w-full mx-auto flex justify-center items-center flex-wrap gap-10">
                         <Block>
                             <img src={screenshot_2} className="scale-120" alt="" />
                         </Block>
@@ -145,7 +166,7 @@ const Home = () => {
                         <Block>
                             <img src={screenshot_1} className="scale-150 absolute right-[-65px] top-[55px]" alt="" />
                         </Block>
-                    </div>
+                    </div> */}
                 </motion.div>
             </section>
 
@@ -160,85 +181,21 @@ const Home = () => {
                 >
                     <div className="max-w-2xl mb-8">
                         <h2 className="text-5xl font-bold text-secondary text-center">
-                            Keep<TextCard backgroundColor="success" rotate="-2">
-                                👀 track
+                            Its Free to <TextCard backgroundColor="info" rotate="-2">
+                                🚀 use
                             </TextCard>
                             <br />
-                            of your subscriptions and where your money is going.
+                            You <TextCard backgroundColor="success" rotate="2">💸buy</TextCard> me <TextCard backgroundColor="warning" rotate="2">☕coffee</TextCard> if you want to 😁
                         </h2>
                         <Description>
-                            SubLy gives you valuable insights into your subscription durations and costs, while also helping you track your spending patterns and manage your subscriptions with ease.
+                            I built this SaaS because I genuinely enjoy creating tools that make life easier for people. Sometimes the best ideas come from scratching your own itch — and I figured if it helps me, it might help others too.
+                            I'm offering it for free because I believe useful tools should be accessible. That said, if you find value in what I’ve made and want to support its ongoing development (or just buy me a coffee ☕), it means the world and helps me keep building more like it.
                         </Description>
+                        <a href="https://buymeacoffee.com/andrewarten" className="p-2 bg-orange-50 border-2 border-warning rounded-lg text-xl font-bold">Buy me a coffee ☕</a>
                     </div>
-                    <div className="mockup-window text-primary border border-base-300 mx-auto w-[600px]">
-                        <img src={screenshot_3} alt="" />
-                    </div>
+
                 </motion.div>
             </section>
-
-            {/* Control Time and Costs Section */}
-            {/* <section className="pt-24">
-                <motion.div
-                    className="max-w-[1100px] px-4 mx-auto flex flex-col justify-center items-center text-center"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeIn}
-                >
-                    <div className="max-w-2xl mb-8">
-                        <h2 className="text-5xl font-bold text-secondary text-center">
-                            Keep<TextCard backgroundColor="warning">
-                                ⌛️ time
-                            </TextCard>
-                            <br />
-                            and costs under control
-                        </h2>
-                        <Description>
-                            You can make informed decisions and ensure optimal resource allocation.
-                        </Description>
-                    </div>
-                    <div className="w-full mx-auto flex justify-center items-center flex-wrap gap-10">
-                        <Block>
-                            <div></div>
-                        </Block>
-                        <Block>
-                            <div></div>
-                        </Block>
-                    </div>
-                </motion.div>
-            </section> */}
-
-            {/* What is Resource Planning Section */}
-            {/* <section className="pt-24">
-                <motion.div
-                    className="max-w-[1100px] px-4 mx-auto flex flex-col justify-center items-center text-center"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeIn}
-                >
-                    <div className="max-w-2xl mb-8">
-                        <h2 className="text-5xl font-bold text-secondary text-center">
-                            What is Resource Planning?
-                        </h2>
-                        <Description>
-                            Project Management is about getting things done.
-                            <br />
-                            Resource Planning is about the bigger picture.
-                            <br />
-                            You should know both.
-                        </Description>
-                    </div>
-                    <div className="w-full mx-auto flex justify-center items-center flex-wrap gap-10">
-                        <Block>
-                            <div></div>
-                        </Block>
-                        <Block>
-                            <div></div>
-                        </Block>
-                    </div>
-                </motion.div>
-            </section> */}
 
             {/* Track Subscriptions Section */}
             <section className="pt-24">
@@ -252,25 +209,9 @@ const Home = () => {
                     <img src={image} className="mb-10 max-w-[20vw] min-w-[200px] w-full" alt="" />
                     <div className="max-w-4xl mb-8">
                         <h2 className="text-3xl md:text-5xl font-bold text-secondary text-center mb-12">
-                            Track
-                            <TextCard backgroundColor="info" rotate="-2">
-                                🤩 subscribtions
-                            </TextCard>
-                            and
-                            <TextCard backgroundColor="warning">
-                                💸 expences
-                            </TextCard>
-                            in a
-                            <TextCard backgroundColor="success">
-                                🙈 simple
-                            </TextCard>
-                            and
-                            <TextCard backgroundColor="error" rotate="-2">
-                                ⚡️ easy
-                            </TextCard>
-                            way
+                            Found a <TextCard backgroundColor="error" rotate="2">🪳bug</TextCard>? <br />Feel free to contact me
                         </h2>
-                        <NavLink to="/signup"><CustomButton size="big">Get started for free</CustomButton></NavLink>
+                        <a href="mailto:andrewartemow@gmail.com" className="p-2 bg-success-50 border-2 border-success rounded-lg text-xl font-bold">📬 Reach me anytime</a>
                     </div>
                 </motion.div>
             </section>

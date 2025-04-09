@@ -31,13 +31,13 @@ const Pricing = () => {
                                 </TextCard>
                             </h1>
                             <Description size="big">
-                                Use SubLy for free or upgrade to Pro at a flat rate.
+                                Got scared? Its just a <TextCard backgroundColor="info" rotate="2">😉joke</TextCard>, its totally <TextCard backgroundColor="success" rotate="-2">🆓free</TextCard> to use
                             </Description>
                         </div>
                     </div>
                 </motion.div>
             </section>
-            <section>
+            {/* <section>
                 <motion.div
                     className="flex items-center justify-center px-4"
                     initial="hidden"
@@ -62,7 +62,7 @@ const Pricing = () => {
                         </Link>
                     </div>
                 </motion.div>
-            </section>
+            </section> */}
             <section className="pt-24">
                 <motion.div
                     className="max-w-[1100px] px-4 mx-auto flex flex-col justify-center items-center text-center"
@@ -71,30 +71,12 @@ const Pricing = () => {
                     viewport={{ once: true }}
                     variants={fadeIn}
                 >
-                    <img src={image} className="mb-10 max-w-[20vw] min-w-[200px] w-full" alt="" />
+                    {/* <img src={image} className="mb-10 max-w-[20vw] min-w-[200px] w-full" alt="" /> */}
                     <div className="max-w-4xl mb-8">
                         <h2 className="text-3xl md:text-5xl font-bold text-secondary text-center mb-12">
-                            Track
-                            <TextCard backgroundColor="info" rotate="-2">
-                                🤩 subscribtions
-                            </TextCard>
-                            and
-                            <TextCard backgroundColor="warning">
-                                💸 expences
-                            </TextCard>
-                            in a
-                            <TextCard backgroundColor="success">
-                                🙈 simple
-                            </TextCard>
-                            and
-                            <TextCard backgroundColor="error" rotate="-2">
-                                ⚡️ easy
-                            </TextCard>
-                            way
+                            But still you can <TextCard backgroundColor="warning" rotate="2">🤝support</TextCard> me<br />if you want to
                         </h2>
-                        <Link to="/signup">
-                            <CustomButton size="big">Get started for free</CustomButton>
-                        </Link>
+                        <a href="https://buymeacoffee.com/andrewarten" className="p-2 bg-orange-50 border-2 border-warning rounded-lg text-xl font-bold">Buy me a coffee ☕</a>
                     </div>
                 </motion.div>
             </section>
