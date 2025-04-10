@@ -25,7 +25,12 @@ import avatar_3 from '/avatars/1729926383582.jpg';
 const Home = () => {
 
     return (
-        <div className="min-h-screen overflow-y-scroll w-screen pb-20">
+        <div className="min-h-screen overflow-y-scroll w-screen pb-20 relative">
+
+            <div className="bg-orange-50 p-4 border-2 border-warning rounded-lg fixed top-[100px] right-[20px]">
+                <a href="https://www.producthunt.com/posts/subly-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-subly&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=951774&theme=light&t=1744270769696" alt="Subly - Track&#0032;your&#0032;subscriptions&#0032;before&#0032;they&#0032;drain&#0032;your&#0032;wallet&#0046; | Product Hunt" style={{ width: "250px", height: "54px", marginBottom: 10 }} width="250" height="54" /></a>
+                <p className="text-xl font-bold text-secondary text-center"><TextCard backgroundColor="warning" rotate="2">🚀upvote</TextCard> me here</p>
+            </div>
             {/* Hero Section */}
             <section>
                 <motion.div
