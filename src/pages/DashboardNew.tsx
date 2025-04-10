@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { supabase } from "../supabaseClient";
@@ -104,7 +104,7 @@ const Dashboard = () => {
     const clickedSubscriptionRef = useRef<any>(null);
     const clickedTrialRef = useRef<any>(null)
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     // Use Refs
     const modalAddFormRef = useRef<HTMLDialogElement>(null);
@@ -140,49 +140,6 @@ const Dashboard = () => {
 
         fetchInitialData();
     }, []);
-
-    useEffect(() => {
-        const checkForOAuthResults = async () => {
-            const params = new URLSearchParams(location.search);
-            const success = params.get('success');
-            // const error = params.get('error');
-
-            if (success) {
-                try {
-                    // 1. Get fetched subscriptions from backend
-                    const response = await fetch('http://localhost:3001/get-results');
-                    const fetchedSubscriptions = await response.json();
-
-                    // 2. Insert each subscription into Supabase
-                    for (const subscription of fetchedSubscriptions) {
-                        const { error } = await supabase
-                            .from('subscriptions')
-                            .insert({
-                                name: subscription.name,
-                                price: parseFloat(subscription.price),
-                                currency: subscription.currency,
-                                typeOfPayment: subscription.typeOfPayment,
-                                upcommingPayment: subscription.upcommingPayment,
-                                user_id: user.id,
-                                icon: subscription.icon,
-                            });
-
-                        if (error) throw error;
-                    }
-
-                    console.log('Successfully inserted', fetchedSubscriptions.length, 'subscriptions');
-                    fetchSubscripions();
-                    navigate('/dashboard', { replace: true });
-
-                } catch (error) {
-                    console.error('Insert failed:', error);
-                    navigate('/dashboard', { replace: true });
-                }
-            }
-        };
-
-        checkForOAuthResults();
-    }, [location.search, user.id, navigate]);
 
     // Memoize Expensive Calculations
     const monthlyCost = useMemo(() => calculateMonthlyCostsInDollars(), [subscriptions]);

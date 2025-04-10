@@ -35,16 +35,15 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
             } catch (error) {
                 console.error("Error fetching session:", error);
             } finally {
-                setTimeout(() => {
-                    setLoading(false);
-                }, 1000)
+                setLoading(false); // Remove the timeout
             }
         };
 
         fetchSession();
 
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-            if (event === "SIGNED_IN") {
+            // Handle initial session and sign in events
+            if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
                 setUser(session?.user ?? null);
             } else if (event === "SIGNED_OUT") {
                 setUser(null);
