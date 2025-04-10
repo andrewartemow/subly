@@ -49,13 +49,13 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
                 {/* Form */}
                 <form onSubmit={handleMainAction} className="flex flex-col gap-4 items-start flex-1">
 
-                    <select defaultValue="Pick a subscription" className="select text-secondary bg-neutral-100" onChange={(e) => {
+                    <select value={addFormData.subscriptionName || "Pick a subscription"} className="select text-secondary bg-neutral-100" onChange={(e) => {
 
                         const selectedSubscription = listedSubscriptions.find(sub => sub.name === e.target.value);
 
                         setAddFormData({ ...addFormData, subscriptionName: e.target.value, websiteLink: selectedSubscription?.websiteLink || "" })
                     }} required>
-                        <option disabled={true}>Pick a subscription</option>
+                        <option disabled={true} value="Pick a subscription">Pick a subscription</option>
                         {listedSubscriptions.map((listedSubscription: ListedSubscriptionInterface) => <option className="text-secondary font-bold" value={listedSubscription.name} key={listedSubscription.id}>
                             {listedSubscription.name}
                         </option>)}
@@ -76,7 +76,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
                         <input type="date" className="text-secondary" value={addFormData.upcomingPayment || ""} onChange={(e) => setAddFormData({ ...addFormData, upcomingPayment: e.target.value })} required />
                     </label>
 
-                    <select defaultValue="Pick a type" className="select text-secondary bg-neutral-100" onChange={(e) => setAddFormData({ ...addFormData, typeOfPayment: e.target.value })} required>
+                    <select value={addFormData.typeOfPayment || "Pick a type"} className="select text-secondary bg-neutral-100" onChange={(e) => setAddFormData({ ...addFormData, typeOfPayment: e.target.value })} required>
                         <option disabled={true}>Pick a type</option>
                         <option value="per month">per month</option>
                         <option value="per year">per year</option>
@@ -88,7 +88,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
                         <option value="Credit Card">Credit Card</option>
                     </select>
 
-                    <select defaultValue="Pick currency" className="select text-secondary bg-neutral-100" onChange={(e) => setAddFormData({ ...addFormData, currency: e.target.value })} required>
+                    <select value={addFormData.currency || "Pick currency"} className="select text-secondary bg-neutral-100" onChange={(e) => setAddFormData({ ...addFormData, currency: e.target.value })} required>
                         <option disabled={true}>Pick currency</option>
                         <option value="$">$</option>
                         <option value="€">€</option>
@@ -116,7 +116,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
                 {/* Form */}
                 <form onSubmit={handleMainAction} className="flex flex-col gap-4 items-start flex-1">
 
-                    <select defaultValue="Pick a subscription" className="select text-secondary bg-neutral-100" onChange={(e) => {
+                    <select value={addTrialFormData.subscriptionName || "Pick a subscription"} className="select text-secondary bg-neutral-100" onChange={(e) => {
 
                         const selectedSubscription = listedSubscriptions.find(sub => sub.name === e.target.value);
 
