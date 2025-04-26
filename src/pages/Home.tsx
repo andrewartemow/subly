@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <div className="min-h-screen overflow-y-scroll w-screen pb-20 relative">
 
-            <div className="bg-orange-50 p-4 border-2 border-warning rounded-lg fixed top-[100px] right-[20px]">
+            <div className="bg-orange-50 p-4 border-2 border-warning rounded-lg fixed z-50 top-[100px] right-[20px]">
                 <a href="https://www.producthunt.com/posts/subly-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-subly&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=951774&theme=light&t=1744270769696" alt="Subly - Track&#0032;your&#0032;subscriptions&#0032;before&#0032;they&#0032;drain&#0032;your&#0032;wallet&#0046; | Product Hunt" style={{ width: "250px", height: "54px", marginBottom: 10 }} width="250" height="54" /></a>
                 <p className="text-xl font-bold text-secondary text-center"><TextCard backgroundColor="warning" rotate="2">🚀upvote</TextCard> me here</p>
             </div>
@@ -135,27 +135,27 @@ const Home = () => {
                         </h2>
                         {/* <Description> */}
                         <div className="flex flex-col w-full items-center lg:flex-row lg:items-start">
-                            <div className="card bg-base-200 rounded-box grid place-items-center py-5 px-4">
-                                <h3 className="mb-4 text-xl font-extrabold w-full text-left">With Subly</h3>
+                            <div className="card bg-neutral-100 rounded-box grid place-items-center py-5 px-4">
+                                <h3 className="mb-4 text-xl font-extrabold w-full text-left text-secondary">With Subly</h3>
                                 <ul className="flex flex-col gap-y-5 w-full">
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ No more surprise charges</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ See upcoming bills at a glance</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ Stop losing money on forgotten trials</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ Track monthly & yearly costs</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">✅ Store and manage invoices</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg text-secondary bg-neutral-200 font-bold">✅ No more surprise charges</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg text-secondary bg-neutral-200 font-bold">✅ See upcoming bills at a glance</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg text-secondary bg-neutral-200 font-bold">✅ Stop losing money on forgotten trials</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg text-secondary bg-neutral-200 font-bold">✅ Track monthly & yearly costs</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg text-secondary bg-neutral-200 font-bold">✅ Store and manage invoices</span></li>
                                 </ul>
                             </div>
-                            <div className="divider divider-vertical lg:divider-horizontal">OR</div>
-                            <div className="card bg-base-200 rounded-box grid place-items-center py-5 px-4">
-                                <h3 className="mb-4 text-xl font-extrabold w-full text-left">Without Subly</h3>
+                            <div className="divider divider-vertical lg:divider-horizontal text-secondary">OR</div>
+                            <div className="card bg-neutral-100 rounded-box grid place-items-center py-5 px-4">
+                                <h3 className="mb-4 text-xl font-extrabold w-full text-left text-secondary">Without Subly</h3>
                                 <ul className="flex flex-col w-full gap-y-5">
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Forgetting about upcoming payments</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Manually tracking costs in spreadsheets</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Getting charged after free trials end</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Overspending without realizing it</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Confusing payment dates</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ Missing saving opportunities</span></li>
-                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 font-bold">❌ No clear cost overview</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ Forgetting about upcoming payments</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ Manually tracking costs in spreadsheets</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ Getting charged after free trials end</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ Overspending without realizing it</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ Confusing payment dates</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ Missing saving opportunities</span></li>
+                                    <li className="text-left"><span className="py-2 px-4 rounded-lg bg-neutral-200 text-secondary font-bold">❌ No clear cost overview</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -196,7 +196,7 @@ const Home = () => {
                             I built this SaaS because I genuinely enjoy creating tools that make life easier for people. Sometimes the best ideas come from scratching your own itch — and I figured if it helps me, it might help others too.
                             I'm offering it for free because I believe useful tools should be accessible. That said, if you find value in what I’ve made and want to support its ongoing development (or just buy me a coffee ☕), it means the world and helps me keep building more like it.
                         </Description>
-                        <a href="https://buymeacoffee.com/andrewarten" className="p-2 bg-orange-50 border-2 border-warning rounded-lg text-xl font-bold">Buy me a coffee ☕</a>
+                        <a href="https://buymeacoffee.com/andrewarten" className="p-2 bg-orange-50 border-2 border-warning rounded-lg text-xl text-secondary font-bold">Buy me a coffee ☕</a>
                     </div>
 
                 </motion.div>
@@ -216,7 +216,7 @@ const Home = () => {
                         <h2 className="text-3xl md:text-5xl font-bold text-secondary text-center mb-12">
                             Found a <TextCard backgroundColor="error" rotate="2">🪳bug</TextCard>? <br />Feel free to contact me
                         </h2>
-                        <a href="mailto:andrewartemow@gmail.com" className="p-2 bg-success-50 border-2 border-success rounded-lg text-xl font-bold">📬 Reach me anytime</a>
+                        <a href="mailto:andrewartemow@gmail.com" className="p-2 bg-green-100 border-2 border-success rounded-lg text-xl font-bold text-secondary">📬 Reach me anytime</a>
                     </div>
                 </motion.div>
             </section>

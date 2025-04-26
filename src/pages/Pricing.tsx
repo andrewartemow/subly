@@ -69,7 +69,7 @@ const Pricing = () => {
                         <h2 className="text-3xl md:text-5xl font-bold text-secondary text-center mb-12">
                             But still you can <TextCard backgroundColor="warning" rotate="2">🤝support</TextCard> me<br />if you want to
                         </h2>
-                        <a href="https://buymeacoffee.com/andrewarten" className="p-2 bg-orange-50 border-2 border-warning rounded-lg text-xl font-bold">Buy me a coffee ☕</a>
+                        <a href="https://buymeacoffee.com/andrewarten" className="p-2 bg-orange-50 border-2 border-warning rounded-lg text-xl font-bold text-secondary">Buy me a coffee ☕</a>
                     </div>
                 </motion.div>
             </section>

@@ -1133,7 +1133,7 @@ const Dashboard = () => {
             <div className="flex flex-col items-center">
                 <div className="flex items-center gap-x-4 mb-2">
                     {avatar && <div className="avatar indicator">
-                        <span className="indicator-item badge badge-secondary text-base-100 text-xs p-2">Free</span>
+                        <span className="indicator-item badge badge-secondary text-base-100 text-xs p-2">best 🏆</span>
                         <div className="w-10 rounded-xl">
                             <img src={avatar} />
                         </div>

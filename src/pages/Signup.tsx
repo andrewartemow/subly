@@ -90,13 +90,13 @@ const Signup = () => {
     return (
         <div className="h-screen w-screen flex flex-col justify-center items-center bg-base-100 p-4">
             <div className="w-full max-w-md">
-                <h1 className="text-4xl font-bold text-center mb-8">
+                <h1 className="text-4xl font-bold text-center mb-8 text-secondary">
                     Create <TextCard backgroundColor="info">Account</TextCard>
                 </h1>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+                        <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-secondary">
                             First Name
                         </label>
                         <input
@@ -105,13 +105,13 @@ const Signup = () => {
                             type="text"
                             value={formData.firstName}
                             onChange={handleChange}
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-neutral w-full text-secondary"
                             required
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-1">
+                        <label htmlFor="email" className="block text-sm font-medium mb-1 text-secondary">
                             Email
                         </label>
                         <input
@@ -120,13 +120,13 @@ const Signup = () => {
                             type="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-neutral w-full text-secondary"
                             required
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="password" className="block text-sm font-medium mb-1">
+                        <label htmlFor="password" className="block text-sm font-medium mb-1 text-secondary">
                             Password
                         </label>
                         <input
@@ -135,13 +135,13 @@ const Signup = () => {
                             type="password"
                             value={formData.password}
                             onChange={handleChange}
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-neutral w-full text-secondary"
                             required
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="repeatPassword" className="block text-sm font-medium mb-1">
+                        <label htmlFor="repeatPassword" className="block text-sm font-medium mb-1 text-secondary">
                             Confirm Password
                         </label>
                         <input
@@ -150,7 +150,7 @@ const Signup = () => {
                             type="password"
                             value={formData.repeatPassword}
                             onChange={handleChange}
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-neutral w-full text-secondary"
                             required
                         />
                     </div>
@@ -181,7 +181,7 @@ const Signup = () => {
                     </div>
                 )}
 
-                <p className="text-center mt-4">
+                <p className="text-center mt-4 text-secondary">
                     Already have an account?{" "}
                     <Link to="/login" className="link link-primary">
                         Log in
